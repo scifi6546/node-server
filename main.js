@@ -6,8 +6,6 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  //console.log(req.url);
-  //file.readDir("");
   if(req.url.startsWith("/api/")){
     api.process(req,res);
   }
