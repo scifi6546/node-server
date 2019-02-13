@@ -15,5 +15,5 @@ describe('api.lsFiles',function(){
 	it('should return hello world\\n',function(){
 		
 		assert.equal(api.lsFiles(),
-			toString({"files":['test.txt','test2.txt']}));});
+			JSON.stringify({"files":['test.txt','test2.txt']}));});
 });
