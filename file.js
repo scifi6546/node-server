@@ -7,7 +7,10 @@ file.load = function(file){
 // I changes stuff!
 file.readDir = function(fileDir){
 	var temp = fs.readdirSync(this.BaseDir+fileDir);
-	console.log(temp);
+	for(var i =0;i<temp.length;i++){
+		temp[i] = String(temp[i]);
+	}
+	//console.log(typeof(temp));
 	return temp;
 }
 module.exports = file;
